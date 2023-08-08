@@ -2,7 +2,7 @@
 from abc import ABC, abstractmethod
 
 # Class Bank
-class Bank(''' YOUR CODE HERE '''):
+class Bank(ABC):
     """ An abstract bank class
 
     [IMPLEMENT ME]
@@ -13,10 +13,19 @@ class Bank(''' YOUR CODE HERE '''):
            adding the `pass` keyword under it. Make this function abstract by
            adding an '@abstractmethod' tag right above the function declaration.
     """
+    @abstractmethod
+    def basicinfo(self):
+        print("This a generic bank")
+        return "Generic bank: 0"
+    
+    @abstractmethod
+    def withdraw(self):
+        pass
+    
     ### YOUR CODE HERE
 
 # Class Swiss
-class Swiss('''YOUR CODE HERE'''):
+class Swiss(Bank):
     """ A specific type of bank than derives from class Bank
 
     [IMPLEMENT ME]
@@ -41,8 +50,25 @@ class Swiss('''YOUR CODE HERE'''):
                  statement saying `"Insufficient funds"`, and return the 
                  original account balance instead.
     """
-    ### YOUR CODE HERE
+    def __init__(self) -> None:
+        # super().__init__()
+        self.bal = 1000
+        # print(f"Swiss Bank: {bal}")
+        
+    def basicinfo(self):
+        print("This is the Swiss Bank")
+        return f"Swiss Bank: {self.bal}"
 
+    def withdraw(self, amount):
+        self.amount = amount
+        if self.bal >= amount:
+            self.bal -= amount
+            print(f"Withdrawn amount: {amount}")
+            print(f"New Balance: {self.bal}")
+        
+        else:
+            print("Insufficient funds")
+        
 # Driver Code
 def main():
     assert issubclass(Bank, ABC), "Bank must derive from class ABC"
