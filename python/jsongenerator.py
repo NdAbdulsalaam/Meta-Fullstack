@@ -8,8 +8,6 @@ import json
 import os
 from employee import details, employee_name, age, title
 
-os.chdir("C:/Users/User/Desktop/Web dev/django/facebook/python")
-
 def create_dict(name, age, title):
     """ Creates a dictionary that stores an employee's information
 
