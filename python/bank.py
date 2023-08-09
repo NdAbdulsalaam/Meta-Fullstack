@@ -21,8 +21,6 @@ class Bank(ABC):
     @abstractmethod
     def withdraw(self):
         pass
-    
-    ### YOUR CODE HERE
 
 # Class Swiss
 class Swiss(Bank):
@@ -51,9 +49,7 @@ class Swiss(Bank):
                  original account balance instead.
     """
     def __init__(self) -> None:
-        # super().__init__()
         self.bal = 1000
-        # print(f"Swiss Bank: {bal}")
         
     def basicinfo(self):
         print("This is the Swiss Bank")
