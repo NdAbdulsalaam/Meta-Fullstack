@@ -1,10 +1,12 @@
 ''' 
 Import statements: 
     1. Import pytest and spellcheck modules
+    2. Using the "try-except: will throw error.
+    3. Comment "raise NotImplementedError"
 '''
 ### WRITE IMPORT STATEMENTS HERE
 import pytest
-from spellcheck import word_count, char_count, first_char, last_char 
+import spellcheck
 
 # String variables to be tested
 alpha = "Checking the length & structure of the sentence."
@@ -13,7 +15,7 @@ beta = "This sentence should fail the test"
 # Do not delete this function. You may change the value assigned to input to test different inputs to your test functions.
 @pytest.fixture
 def input_value():
-    input = beta
+    input = alpha
     return input
 
 # First test function test_length()
@@ -29,11 +31,11 @@ def test_length(input_value):
                    in the input_value() function
     """
     ### WRITE SOLUTION CODE HERE
-    try:
-        assert word_count(input_value) < 10
-        assert char_count(input_value) <50
-    except:
-        raise NotImplementedError()
+    # try:
+    assert spellcheck.word_count(input_value) < 10
+    assert spellcheck.char_count(input_value) <50
+    # except:
+        # raise NotImplementedError()
 
 # Second test function test_struc()
 def test_struc(input_value):
@@ -48,10 +50,10 @@ def test_struc(input_value):
                    in the input_value() function
     """
     ### WRITE SOLUTION CODE HERE
-    try:
-        assert first_char(input_value).isupper()
-        assert last_char(input_value) == "."
-    except:
-        raise NotImplementedError()
+    # try:
+    assert spellcheck.first_char(input_value).isupper()
+    assert spellcheck.last_char(input_value) == "."
+    # except:
+        # raise NotImplementedError()
 
 # Run these tests with `python3 -m pytest test_spellcheck.py`
