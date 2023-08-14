@@ -1,0 +1,5 @@
+#!/bin/bash
+
+name=Abdulsalaam
+greeting=Welcome
+echo $greeting $name
