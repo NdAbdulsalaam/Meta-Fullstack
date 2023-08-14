@@ -9,3 +9,5 @@ os.chdir("c:/Users/User/Desktop/Web dev/django/facebook/python/")
 
 file = open("sampletext.txt", "r")
 print(file.read())
+
+# You're actually a test file
