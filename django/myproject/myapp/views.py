@@ -5,6 +5,9 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Hello, world")
 
+def members(request):
+    pass
+
 def menu(request, name):
     fruits = {
         'lemon': 'Lemon is a type of fruit',
@@ -16,4 +19,7 @@ def menu(request, name):
     description = fruits[name]
     
     return HttpResponse(f"<h2>{name}</h2> {description}")
+
+
+
 
