@@ -27,7 +27,6 @@ def form_view(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            print("Saved!")
     context = {"form" : forms}
     return render(request, "booking.html", context)
 
