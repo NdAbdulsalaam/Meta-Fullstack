@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lb8vc5or9sj+ypfm)j%@^&(v=4hf*!z_3l7tg(4h^asiw-q5q!'
+SECRET_KEY = 'django-insecure-5bl7+qj83z9$dk+ew1f5l#dj!yj%fgnd4$v=sh3&2n7zy62m9a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -31,14 +31,13 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    # 'myapp.apps.MyappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp'
+    'myapp',
 ]
 
 MIDDLEWARE = [
@@ -76,26 +75,12 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-DATABASES = {   
-    'default': {   
-        'ENGINE': 'django.db.backends.mysql',   
-        'NAME': 'facebook',   
-        'USER': 'root',   
-        'PASSWORD': '',   
-        'HOST': '127.0.0.1',   
-        'PORT': '3306',   
-        'OPTIONS': {   
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
-        }   
-    }   
-} 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
@@ -132,8 +117,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / 'productionfiles'
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'productionfiles'
+# STATICFILES_DIRS= ['myproject/static']
+
+# STATIC_ROOT = BASE_DIR / 'productionfiles'
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'mystaticfiles'
+# ]
 
 
 # Default primary key field type
