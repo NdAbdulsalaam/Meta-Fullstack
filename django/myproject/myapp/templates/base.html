@@ -8,49 +8,41 @@
 
     <title>Little Lemon</title>
     <meta name="description" content="A brief description" />
-    <!-- <meta
+    <meta
       name="author"
       content="Based in Chicago, Illinois, Little Lemon is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
-    /> -->
+    />
 
-    <!-- Load favicon
+    <!-- Load favicon -->
     <link
       rel="shortcut icon"
       type="image/png"
-      href="{% static 'TruLearn.PNG' %}"
-    /> -->
-
-    <link href="{% static 'TruLearn.PNG' %}" /> 
+      href="{% static 'img/favicon.ico' %}"
+    />
 
     <!-- Include your CSS files here -->
     <link
       rel="preload"
       as="style"
-      href="{% static 'style.css' %}"
+      href="{% static 'css/style.css' %}"
       onload="this.rel = 'stylesheet'"
     />
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap"
       rel="stylesheet"
-    /> -->
+    />
   </head>
 
   <body>
-    <!-- Add include tag -->
-    <!-- {% include 'partials/_header.html' %} -->
-    
+    <!--Header content-->
+    {% include 'partials/_header.html' %}
 
-    <main>
-       <!-- Begin block content --> 
-       {% block content %}
+    <main>{% block content %} {% endblock %}</main>
 
-       {% endblock %}
-      <!-- End block content --> 
-    </main>
-
-
+    <!--Footer content-->
+    <!-- Replace this comment with your code  -->
   </body>
 </html>
