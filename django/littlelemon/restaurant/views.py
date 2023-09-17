@@ -22,3 +22,9 @@ def book(request):
     return render(request, 'book.html', context)
 
 # Add your code here to create new views
+
+def menu(request):
+    return render(request, 'menu.html')
+
+def menu_item(request):
+    return render(request, 'menu_item.html')

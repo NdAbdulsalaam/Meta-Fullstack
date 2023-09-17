@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# DEBUG = False
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'littlelemon.urls'
@@ -122,6 +124,8 @@ USE_TZ = True
 
 # The settings for static files have been updated for the Graded assessment
 STATIC_URL = 'restaurant/static/'
+
+STATIC_ROOT = BASE_DIR / 'productionfiles'
 
 STATICFILES_DIRS = [
     "restaurant/static",
