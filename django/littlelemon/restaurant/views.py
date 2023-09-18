@@ -15,9 +15,9 @@ def about(request):
 def book(request):
     form = BookingForm()
     if request.method == 'POST':
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            form.save()
+        forms = BookingForm(request.POST)
+        if forms.is_valid():
+            forms.save()
     context = {'form':form}
     return render(request, 'book.html', context)
 
@@ -31,7 +31,6 @@ def menu(request):
 def display_menu_item(request, pk=None):
     if pk:
         menu_item = Menu.objects.get(pk=pk)
-        # menu_item = {"menu_item": menu_item}
     else:
         menu_item = ""
         
