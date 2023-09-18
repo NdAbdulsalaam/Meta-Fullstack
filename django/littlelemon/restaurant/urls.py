@@ -13,5 +13,5 @@ urlpatterns = [
     # Add the remaining URL path configurations here
     
     path('menu/', views.menu, name="menu"),
-    path('menu_item/<int:pk>/', views.display_menu_items, name="menu_items"),
+    path('menu_item/<int:pk>/', views.display_menu_item, name="menu_item"),
 ]

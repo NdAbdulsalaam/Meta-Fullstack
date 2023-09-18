@@ -28,10 +28,11 @@ def menu(request):
     main_data = {'menu': menu_data}
     return render(request, 'menu.html', main_data)
 
-def display_menu_items(request, pk):
+def display_menu_item(request, pk=None):
     if pk:
         menu_item = Menu.objects.get(pk=pk)
-        menu_item = {"menu_item": menu_item}
-        return render(request, 'menu_item.html', menu_item)
+        # menu_item = {"menu_item": menu_item}
     else:
-        return HttpResponse("Item Not Available")
+        menu_item = ""
+        
+    return render(request, 'menu_item.html', {"menu_item": menu_item})
