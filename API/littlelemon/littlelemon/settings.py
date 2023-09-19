@@ -124,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = 'restaurant/static/'
 
-STATIC_ROOT = BASE_DIR / 'productionfiles'
+# STATIC_ROOT = BASE_DIR / 'productionfiles'
 
 STATICFILES_DIRS = [
     "restaurant/static",
