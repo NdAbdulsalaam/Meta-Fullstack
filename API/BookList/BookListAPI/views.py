@@ -13,7 +13,6 @@ def index(request):
 
 def booking(request):
     my_books = Book.objects.all()
-    # HttpResponse({'my_books': my_books})
     return render(request, 'books.html', {'my_books': my_books})
 
 @csrf_exempt
