@@ -29,7 +29,7 @@ def books(request):
     try:
         book.save()
     except IntegrityError:
-        JsonResponse(
+        return JsonResponse(
             {'error':'true','message':'required field missing'},status=400
         )
     
