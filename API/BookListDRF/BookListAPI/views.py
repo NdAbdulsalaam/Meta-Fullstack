@@ -25,11 +25,6 @@ class SingleBookView(generics.RetrieveUpdateAPIView):
     queryset = models.Book.objects.all()
     serializer_class = serializer.BookSerializer
     
-
-class MenuItemsView(generics.ListCreateAPIView):
-    queryset = models.MenuItem.objects.all()
-    serializer_class = serializer.MenuItemSerializer
-    
 class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.MenuItem.objects.all()
     serializer_class = serializer.MenuItemSerializer
@@ -37,3 +32,10 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
 class CategoriesView(generics.ListCreateAPIView):
     queryset = models.Category.objects.all()
     serializer_class = serializer.CategorySerializer
+    
+class MenuItemsView(generics.ListCreateAPIView):
+    queryset = models.MenuItem.objects.all()
+    serializer_class = serializer.MenuItemSerializer
+    ordering_fields = ['price', 'inventory']
+    filterset_fields = ['price', 'inventory']
+    search_fields = ['category']
