@@ -34,6 +34,6 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.MenuItem.objects.all()
     serializer_class = serializer.MenuItemSerializer
     
-# class CategoriesView(generics.ListCreateAPIView):
-#     queryset = Category.objects.all()
-#     serializer_class = CategorySerializer
+class CategoriesView(generics.ListCreateAPIView):
+    queryset = models.Category.objects.all()
+    serializer_class = serializer.CategorySerializer
