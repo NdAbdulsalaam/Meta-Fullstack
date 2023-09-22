@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_xml',
     'BookListAPI',
     'debug_toolbar',
 ]
@@ -132,7 +133,7 @@ INTERNAL_IPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES' : ['rest_framework.renderers.JSONRenderer',
-                                  'rest_framework.renderers.BrowsableAPIRenderer'
-                                #   'rest_framework\_xml.renderers.XMLRenderer'
+                                  'rest_framework.renderers.BrowsableAPIRenderer',
+                                  'rest_framework\_xml.renderers.XMLRenderer'
                                   ]
 }
