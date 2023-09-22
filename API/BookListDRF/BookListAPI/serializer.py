@@ -19,3 +19,8 @@ class MenuItemSerializer(seria.ModelSerializer):
             'min_value': 0
         }
     }
+    
+class CategorySerializer (serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id','title']
