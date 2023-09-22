@@ -29,3 +29,7 @@ class SingleBookView(generics.RetrieveUpdateAPIView):
 class MenuItemView(generics.ListCreateAPIView):
     queryset = models.MenuItem.objects.all()
     serializer_class = serializer.MenuItemSerializer
+    
+class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.MenuItem.objects.all()
+    serializer_class = serializer.MenuItemSerializer
