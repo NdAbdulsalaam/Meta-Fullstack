@@ -138,7 +138,7 @@ REST_FRAMEWORK = {
         'rest_framework_xml.renderers.XMLRenderer',
         ],
     
-    'DEFAULT_FILTER_CLASSES' : [ 
+    'DEFAULT_FILTER_BACKENDS' : [ 
         'rest_framework.filters.OrderingFilter',
         'rest_framework.filters.SearchFilter',
                                   ],
